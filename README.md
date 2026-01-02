@@ -1,53 +1,60 @@
-# Pothole Reporter
+# Indian Potholes
 
-Empowered Indian’s civic-tech platform to report potholes, track responses, and drive transparency and accountability.
+> **This project has been discontinued.**
 
-This repository contains a React frontend and a Node.js/Express backend. The project is released under the GNU Affero General Public License v3.0 (AGPL-3.0) to ensure improvements made for network services are shared with the community.
+---
 
-## Quick Start
+## What This Was
 
-- Prerequisites: Node.js LTS, npm, MongoDB (or Atlas), and Image/Storage credentials if using media uploads.
+Indian Potholes was a civic technology platform designed to help Indian citizens report road hazards. Users could photograph potholes, tag them with GPS coordinates, and have reports automatically routed to responsible officials - contractors, engineers, corporators, MLAs, and MPs.
+
+We built this with the hope that technology could bridge the gap between citizens and governance.
+
+## Why We Shut Down
+
+Despite our best efforts, **no Indian government authority engaged meaningfully with this platform**.
+
+- We reached out to multiple government bodies
+- We wrote emails and tried official channels
+- We hoped that a tool built with good intentions would spark interest
+
+We received silence.
+
+A pothole reporting platform without responsive authorities is just a graveyard of unfulfilled hopes. We refused to let citizens believe their voices were being heard when they weren't.
+
+---
+
+## The Code
+
+This repository contains the complete source code:
+
+- **Frontend**: React 19 + Vite application with Leaflet maps
+- **Backend**: Node.js/Express API with MongoDB
+
+The code is open source under the GNU Affero General Public License v3.0 (AGPL-3.0) and available for anyone who wants to build on it or try again with better luck.
+
+### Quick Start (for archival purposes)
+
+- Prerequisites: Node.js LTS, npm, MongoDB (or Atlas)
 - Install dependencies:
   - `cd backend && npm install`
-  - `cd ../frontend && npm install`
-- Configure env files (see Environment below).
+  - `cd frontend && npm install`
+- Configure env files using the `*.example` files as templates
 - Run dev:
   - Backend: `cd backend && npm run dev`
   - Frontend: `cd frontend && npm run dev`
 
-## Environment
+---
 
-Never commit real secrets. Use the provided examples:
+## Contact
 
-- Backend: `backend/.env.example` → copy to `backend/.env` and fill values.
-- Frontend: `frontend/.env.example` → copy to `frontend/.env` and fill values.
+If you'd like to discuss this project or have questions:
 
-Recommended .gitignore rules are in place to prevent committing `*.env` files. If you previously committed one, remove it from Git history before open-sourcing.
+**Roshan Singh**
+Email: roshan@empoweredindian.in
 
-### Important frontend envs
+---
 
-- `VITE_API_URL` and related API URLs.
-- `VITE_SECURE_STORAGE_KEY` (optional): A long random string (>=32 chars) used to derive an encryption key for the browser-side secure storage. If not set, the app will generate a per-session random key. This is defense-in-depth only; frontend keys are not true secrets.
+*Made with love, frustration, and hope for better roads in India.*
 
-## Security Notes
-
-- Do not commit `.env` files. Use the `*.example` files as templates.
-- Frontend secure storage now derives a key from either `VITE_SECURE_STORAGE_KEY` or a per-session random key, and uses a per-item random salt + IV.
-- Even with encryption, any data in the browser is at risk from XSS. Keep session tokens short-lived and continue to validate on the server.
-
-## Contributing
-
-We welcome contributions! To keep things organized, please open an issue first to discuss proposed changes before creating a pull request. Then read `CONTRIBUTING.md` for guidelines on branches, commits, and PRs.
-
-## Code of Conduct
-
-We are committed to a welcoming and inclusive community. Please read `CODE_OF_CONDUCT.md`.
-
-## License
-
-This project is licensed under the GNU Affero General Public License v3.0. See `LICENSE` for the full text.
-
-## Star History
-
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Empowered-Indian/indian-potholes&type=Date)](https://www.star-history.com/#Empowered-Indian/indian-potholes&Date)
+*2024 - 2025*
